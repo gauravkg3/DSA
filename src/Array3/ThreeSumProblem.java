@@ -21,7 +21,7 @@ public class ThreeSumProblem {
         }
         //List<List<Integer>> ans=twoSum(a,sum,0);
         //System.out.println(ans);
-        System.out.println(triplet  );
+        System.out.println(triplet);
 
     }
     static List<List<Integer>> twoSum(int a[],int sum,int startFrom)
@@ -59,3 +59,65 @@ public class ThreeSumProblem {
     }
 
 }
+//import java.util.*;
+//
+//public class Solution {
+//    public List<List<Integer>> threeSum(int[] nums) {
+//        //You can code here
+//        Arrays.sort(nums);
+//        List<List<Integer>> ans=new ArrayList<>();
+//        for(int i=0;i<nums.length-2;i++)
+//        {
+//            if(i>0 && nums[i]==nums[i-1]) continue;
+//            List<List<Integer>> temp=new ArrayList<>();
+//            temp=threeSumHelper(nums,-nums[i],i+1);
+//            for(List<Integer> list:temp)
+//            {
+//                list.add(0,nums[i]);
+//                ans.add(list);
+//            }
+//        }
+//
+//        return ans;
+//
+//    }
+//    public List<List<Integer>> threeSumHelper(int [] nums,int target,int startsFrom)
+//    {
+//        int l=startsFrom;
+//        int r=nums.length-1;
+//        List<List<Integer>> ans=new ArrayList<>();
+//        while(l<r)
+//        {
+//
+//            // if(l>startsFrom && nums[l]==nums[l-1]){
+//            //   l++;
+//            //   continue;
+//            // }
+//            //   if(r<nums.length-1 && nums[r]==nums[r+1]){
+//            //   l++;
+//            //   continue;
+//            // }
+//            if(nums[l]+nums[r]>target)
+//            {
+//                r--;
+//            }
+//            else if(nums[l]+nums[r]<target)
+//            {
+//                l++;
+//            }
+//            else{
+//                List<Integer> temp=new ArrayList<>();
+//                temp.add(nums[l]);
+//                temp.add(nums[r]);
+//
+//                //while (l < r && nums[l] == nums[l + 1]) l++; while (l < r && nums[r] == nums[r - 1]) r--;
+//
+//                ans.add(temp);
+//                l++;
+//                r--;
+//
+//            }
+//        }
+//        return ans;
+//    }
+//}

@@ -2,7 +2,7 @@ package backtracking2;
 
 public class GenerateParentheses {
     public static void main(String[] args) {
-        int n=4;
+        int n=3;
         generateParenethese(0,0,n,"",0);
     }
     static void generateParenethese(int open ,int close,int n,String curr,int i)
